@@ -2,13 +2,13 @@
 <% if @list.errors.any? %>
     <%= @list.errors.count %>件のエラーが発生しました
     <u1>
-        <% @list.errors.full_massages.each do |massage| %>
-            <li><%= massage %></li>
-        <% end %>
+     <% @list.errors.full_massages.each do |massage| %>
+        <li><%= massage %></li>
+     <% end %>
     </u1>
 <% end %>
 
-<%= form_with model: @list, url: '/lists',method: :post do |f| %>
+<%= form_with model: @list, url: '/lists', method: :post do |f| %>
     
     <h4>タイトル</h4>
 <%= f.text_field :title %>
